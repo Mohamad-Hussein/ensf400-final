@@ -43,14 +43,21 @@ Its essential goals:
 * Easy to get up to speed
 
 #### Table of contents:
-1. [Optional dependencies](#optional-dependencies)
-1. [Chromedriver installation notes](#chromedriver-installation-notes)
-1. [Python installation notes](#python-installation-notes)
-1. [To build and run tests](#to-build-and-run-tests)
-1. [To run the application](#to-run-the-web-application)
-1. [To run API and UI tests](#to-run-api-and-ui-tests)
-1. [Summary of relevant Gradle commands](#summary-of-relevant-gradle-commands)
-1. [The whole shebang - CI/CD pipeline](#the-whole-shebang---a-cicd-pipeline)
+- [Demo - demonstrates an application and tests](#demo---demonstrates-an-application-and-tests)
+    - [Quick Start:](#quick-start)
+    - [Summary:](#summary)
+    - [Table of contents:](#table-of-contents)
+        - [Optional Dependencies](#optional-dependencies)
+    - [Chromedriver installation notes](#chromedriver-installation-notes)
+    - [Python installation notes](#python-installation-notes)
+    - [To build and run tests:](#to-build-and-run-tests)
+    - [To run the web application:](#to-run-the-web-application)
+    - [To build image and run container](#to-build-image-and-run-container)
+    - [To run API and UI tests:](#to-run-api-and-ui-tests)
+    - [Summary of relevant Gradle commands](#summary-of-relevant-gradle-commands)
+    - [The whole shebang - a CI/CD pipeline](#the-whole-shebang---a-cicd-pipeline)
+        - [Features of the pipeline:](#features-of-the-pipeline)
+- [Screenshots:](#screenshots)
 
 ###### Optional Dependencies
 If you want API testing and Selenium testing, you will need
@@ -118,6 +125,17 @@ On Windows
     
 Then, head to http://localhost:8080/demo    
     
+#### To build image and run container
+
+1. Build the Docker image:
+        ```bash
+        docker build -t my-app .
+        ```
+
+2. Run the Docker container:
+        ```bash
+        docker run my-app
+        ```
 
 #### To run API and UI tests:
 Note: The app has to be [already running](#to-run-the-web-application) for these tests to pass, and you _need_
